@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="The world's greatest website." />
+    <meta name="keywords" content="simpsons, homero, mr x, homer's web page" />
+    <meta name="author" content="Ixshel Escamilla" />
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <title>Homer's Web Page | The world's greatest website</title>
+  </head>
+
+  <body>
+    <div data-animation="first">
+      <div cortina-izq="Homer's"></div>
+
+      <script>
+        document.addEventListener(
+          'contextmenu',
+          function (e) {
+            e.preventDefault();
+          },
+          false
+        );
+      </script>
+
+      <script src="loopify.js" type="text/javascript"></script>
+      <script>
+        loopify('./audio/hello-audio-inicio.wav', ready);
+        function ready(err, loop) {
+          if (err) {
+            console.warn(err);
+          }
+
+          setTimeout(function () {
+            loop?.play();
+          }, 1000); // reproduce despues de 1s
+
+          setTimeout(function () {
+            loop?.stop();
+          }, 1967); // detiene despues de 1967ms (967ms que dura el audio + 1000ms)
+        }
+
+        loopify('./audio/hello-audio-looped.wav', ready1);
+        function ready1(err, loop) {
+          if (err) {
+            console.warn(err);
+          }
+
+          setTimeout(function () {
+            loop?.play();
+          }, 1367); // reproduce despues del tiempo indicado en ms (pisa un poquito el audio anterior antes que termine)
+        }
+      </script>
+
+      <table class="responsive-table">
+        <tbody>
+          <tr>
+            <td colspan="9" align="center">
+              <br />
+              <br />
+              <br />
+              <img
+                src="https://i.imgur.com/w2U3cMe.png"
+                width="584"
+                height="57"
+              />
+              <!--<img src="images/header.png" width="584" height="57"/>-->
+              <br />
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://i.imgur.com/8vBZt79.gif"
+                height="60"
+                width="60"
+              />
+              <!--<img src="images/reloj_60px.gif" height="60" width="60" />-->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td rowspan="2" align="center">
+              <img
+                src="https://i.imgur.com/35eRLsx.gif"
+                height="384"
+                width="208"
+              />
+              <!--<img src="images/jebus.gif" height="384" width="208" />-->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <img
+                src="https://i.imgur.com/rfgZDZ9.gif"
+                height="70"
+                width="70"
+              />
+              <!--<img src="images/tostadora_70px.gif" height="70" width="70" />-->
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://i.imgur.com/qcZrv7k.gif"
+                height="36"
+                width="70"
+              />
+              <!--<img src="images/gusano_60px.gif" height="36" width="70" />-->
+            </td>
+            <td></td>
+            <td align="center">
+              <img src="httpsi.imgur.com/rfgZDZ9.gif" height="70" width="70" />
+              <!--<img src="images/tostadora_70px.gif" height="70" width="70" />-->
+            </td>
+            <td></td>
+            <td></td>
+            <td align="right">
+              <img
+                src="https://i.imgur.com/LzkRZNO.gif"
+                height="40"
+                width="70"
+              />
+              <!--<img src="images/gusano_70px.gif" height="40" width="70" />-->
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td rowspan="2" align="center">
+              <img
+                src="https://i.imgur.com/RLOthSg.gif"
+                height="90"
+                width="90"
+              />
+              <!--<img src="images/boca_90px.gif" height="90" width="90" />-->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://i.imgur.com/4IMtxIj.gif"
+                height="100"
+                width="100"
+              />
+              <!--<img src="images/tostadora_100px.gif" height="100" width="100" />-->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td align="right">
+              <img
+                src="https://i.imgur.com/bTgwHP9.gif"
+                height="80"
+                width="80"
+              />
+              <!--<img src="images/campana_80px.gif" height="80" width="80" />-->
+            </td>
+            <td></td>
+            <td align="center">
+              <img
+                src="https://i.imgur.com/RLOthSg.gif"
+                height="90"
+                width="90"
+              />
+              <!--<img src="images/boca_90px.gif" height="90" width="90" />-->
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://i.imgur.com/Sm6yxaJ.gif"
+                height="60"
+                width="60"
+              />
+              <!--<img src="images/campana_60px.gif" height="60" width="60" />-->
+            </td>
+            <td></td>
+            <td>
+              <img
+                src="https://i.imgur.com/8vBZt79.gif"
+                height="60"
+                width="60"
+              />
+              <!--<img src="images/reloj_80px.gif" height="60" width="60" />-->
+            </td>
+            <td></td>
+            <td></td>
+            <td rowspan="3" align="right">
+              <img
+                src="https://i.imgur.com/4IMtxIj.gif"
+                height="100"
+                width="100"
+              />
+              <!--<img src="images/tostadora_100px.gif" height="100" width="100" />-->
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <img
+                src="https://i.imgur.com/ll8ej21.gif"
+                height="60"
+                width="60"
+              />
+              <!--<img src="images/reloj_60px.gif" height="60" width="60" />-->
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://i.imgur.com/LzkRZNO.gif"
+                height="40"
+                width="70"
+              />
+              <!--<img src="images/gusano_70px.gif" height="40" width="70" />-->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+      <br />
+
+      <p class="copy">Website developed by Ixshel Escamilla in 2023</p>
+      <p class="copy">
+        All images are copyrighted by and belong to the Fox Broadcasting Company
+      </p>
+
+      <div cortina-der="Web Page"></div>
+    </div>
+  </body>
+</html>
