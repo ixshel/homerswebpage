@@ -25,5 +25,5 @@ jobs:
       - name: Send Notification to MS Teams
         run: |
           curl -H "Content-Type: application/json" -d '{
-            "text": "✅ A pull request has been merged!\n\n**🔹 Environment:** '${{ env.TIER }}'\n🔹 **Repository:** '${{ github.repository }}'\n🔹 **PR Title:** '${{ github.event.pull_request.title }}'\n🔹 **Merged By:** '${{ github.event.pull_request.merged_by.login }}'\n🔹 **PR Link:** '${{ github.event.pull_request.html_url }}'"
-          }' ${{ secrets.TEAMS_WEBHOOK_URL }}
+            "text": "✅ A pull request has been merged!\n\n🔹 **Environment:** '${{ env.TIER }}'\n🔹 **Repository:** '${{ github.repository }}'\n🔹 **PR Title:** '${{ github.event.pull_request.title }}'\n🔹 **Merged By:** '${{ github.event.pull_request.merged_by.login }}'\n🔹 **PR Link:** '${{ github.event.pull_request.html_url }}'"
+          }' ${{ secrets.TEAMS_WEBHOOK_MAIN }}
