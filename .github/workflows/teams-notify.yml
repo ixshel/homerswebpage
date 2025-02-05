@@ -1,0 +1,29 @@
+name: Notify MS Teams on PR Merge
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  notify-teams:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Tier Label Based on Branch
+        run: |
+          if [[ "${{ github.event.pull_request.base.ref }}" == "main" ]]; then
+            echo "TIER=🚀 **Production (Main)**" >> $GITHUB_ENV
+          elif [[ "${{ github.event.pull_request.base.ref }}" == "staging" ]]; then
+            echo "TIER=🛠️ **Staging**" >> $GITHUB_ENV
+          elif [[ "${{ github.event.pull_request.base.ref }}" == "develop" ]]; then
+            echo "TIER=🔧 **Development**" >> $GITHUB_ENV
+          else
+            echo "TIER=Unknown Environment" >> $GITHUB_ENV
+          fi
+
+      - name: Send Notification to MS Teams
+        run: |
+          curl -H "Content-Type: application/json" -d '{
+            "text": "✅ A pull request has been merged!\n\n**🔹 Environment:** '${{ env.TIER }}'\n🔹 **Repository:** '${{ github.repository }}'\n🔹 **PR Title:** '${{ github.event.pull_request.title }}'\n🔹 **Merged By:** '${{ github.event.pull_request.merged_by.login }}'\n🔹 **PR Link:** '${{ github.event.pull_request.html_url }}'"
+          }' ${{ secrets.TEAMS_WEBHOOK_URL }}
